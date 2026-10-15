@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SHIRT.co – Premium Cotton Shirt</title>
+<link rel="stylesheet" href="2.css">
+</head>
+<body>
+
+<header class="nav">
+  <img src="logo.jpg" alt="SHIRT.co" class="logo">
+  <a href="#order" class="nav-btn">Order Now</a>
+</header>
+
+<section class="hero">
+  <div class="hero-img">
+    <span class="badge">40% OFF</span>
+    <img src="product.jpg" alt="Premium cotton shirt">
+  </div>
+  <div class="hero-txt">
+    <p class="tag">New Collection</p>
+    <h1>Premium Mandarin-Collar <span>Cotton Shirt</span></h1>
+    <p class="sub">Soft, breathable and perfectly tailored. Look sharp at work, at events, or on a weekend out.</p>
+    <div class="price"><del>1000 Taka</del><strong>600 Taka</strong></div>
+    <p class="deliv">🚚 Delivery: <b>80 Taka</b> inside Dhaka · <b>120 Taka</b> outside Dhaka</p>
+    <button class="cta" id="orderBtn">Order Now</button>
+  </div>
+</section>
+
+<section class="features">
+  <div><i>🧵</i><h3>100% Cotton</h3><p>Soft and breathable all day</p></div>
+  <div><i>✨</i><h3>Premium Finish</h3><p>Quality stitching &amp; buttons</p></div>
+  <div><i>🚚</i><h3>Fast Delivery</h3><p>All over Bangladesh</p></div>
+  <div><i>💵</i><h3>Cash on Delivery</h3><p>Pay when you receive</p></div>
+</section>
+
+<section id="order" class="order reveal">
+  <div class="order-card">
+    <h2>Place Your Order</h2>
+    <p class="muted">Fill in your details and we'll deliver to your door.</p>
+
+    <form id="orderForm" novalidate>
+      <div class="field"><label>Full Name</label><input id="name" placeholder="Your full name" required></div>
+      <div class="field"><label>Phone Number</label><input id="phone" type="tel" inputmode="numeric" placeholder="01XXXXXXXXX" maxlength="11" required></div>
+      <div class="field"><label>Full Address</label><textarea id="address" rows="2" placeholder="House, road, area, district" required></textarea></div>
+
+      <label class="lbl">Delivery Area</label>
+      <div class="choices two">
+        <label><input type="radio" name="area" value="80" checked><span>Inside Dhaka<small>80 Taka</small></span></label>
+        <label><input type="radio" name="area" value="120"><span>Outside Dhaka<small>120 Taka</small></span></label>
+      </div>
+
+      <label class="lbl">Size</label>
+      <div class="choices sizes">
+        <label><input type="radio" name="size" value="M" checked><span>M</span></label>
+        <label><input type="radio" name="size" value="L"><span>L</span></label>
+        <label><input type="radio" name="size" value="XL"><span>XL</span></label>
+        <label><input type="radio" name="size" value="XXL"><span>XXL</span></label>
+      </div>
+
+      <label class="lbl">Quantity</label>
+      <div class="qty"><button type="button" id="minus">−</button><span id="qty">1</span><button type="button" id="plus">+</button></div>
+
+      <div class="summary">
+        <div><span>Product price</span><b id="sPrice">600 Taka</b></div>
+        <div><span>Delivery charge</span><b id="sDel">80 Taka</b></div>
+        <div class="total"><span>Total</span><b id="sTotal">680 Taka</b></div>
+      </div>
+      <p class="error" id="err"></p>
+      <button class="cta full" type="submit">Confirm Order</button>
+    </form>
+  </div>
+</section>
+
+<footer>© 2026 SHIRT.co · All rights reserved</footer>
+
+<a class="wa" href="https://wa.me/8801639291886?text=Hello%20SHIRT.co%2C%20I%20need%20help%20with%20my%20order." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" width="30" height="30" fill="#fff"><path d="M16.04 3C8.84 3 3 8.8 3 15.95c0 2.28.6 4.5 1.74 6.46L3 29l6.76-1.7a13.1 13.1 0 0 0 6.28 1.6C23.2 28.9 29 23.1 29 15.95 29 8.8 23.2 3 16.04 3Zm0 23.7c-1.95 0-3.86-.52-5.53-1.5l-.4-.23-4.01 1.01 1.07-3.88-.26-.4a10.6 10.6 0 0 1-1.63-5.65c0-5.87 4.8-10.65 10.76-10.65 5.9 0 10.7 4.78 10.7 10.65 0 5.87-4.8 10.65-10.7 10.65Zm5.87-7.98c-.32-.16-1.9-.93-2.2-1.04-.3-.1-.5-.16-.72.16-.2.32-.83 1.04-1.02 1.26-.19.2-.38.24-.7.08-.32-.16-1.36-.5-2.58-1.6-.95-.84-1.6-1.9-1.78-2.2-.19-.32-.02-.5.14-.66.14-.14.32-.38.48-.56.16-.19.2-.32.32-.54.1-.2.05-.4-.03-.56-.08-.16-.72-1.72-.98-2.35-.26-.62-.52-.54-.72-.55h-.6c-.2 0-.56.08-.85.4-.3.32-1.12 1.1-1.12 2.66 0 1.57 1.15 3.08 1.3 3.3.16.2 2.25 3.4 5.44 4.77.76.33 1.35.52 1.82.67.76.24 1.45.2 2 .12.6-.1 1.9-.78 2.16-1.52.27-.75.27-1.4.19-1.52-.08-.14-.3-.22-.6-.38Z"/></svg>
+  <span>Need help?</span>
+</a>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <canvas id="poster" width="800" height="1100"></canvas>
+    <div class="modal-btns">
+      <button class="btn-ok" id="okBtn">OK</button>
+      <button class="btn-dl" id="dlBtn">Download</button>
+    </div>
+  </div>
+</div>
+
+<script src="3.js"></script>
+</body>
+</html>
